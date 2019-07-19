@@ -97,7 +97,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
- export PATH="/opt/anaconda3/bin:$PATH"
-alias cls="clear"
-alias py3="python3"
 
+export PATH="/opt/anaconda3/bin:$PATH"
+alias cls='clear'
+alias py3='python3'
+alias dir='ls -la'
+alias s="neofetch"
+
+alias -s cpp='vim'
+alias -s c='vim'
+alias -s txt='vim'
+
+# proxy list
+alias proxy='export all_proxy=socks5://127.0.0.1:1080'
+alias unproxy='unset all_proxy'
+# export all_proxy=socks5://127.0.0.1:1080
