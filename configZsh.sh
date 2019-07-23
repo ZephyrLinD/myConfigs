@@ -36,11 +36,9 @@ function install_on_linux()
 
 function install_oh_my_zsh_and_plugins()
 {
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    fork sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    rm -rf ~/.zshrc
-    ln -s ./.zshrc ~/.zshrc
 }
 
 function print_logo()
@@ -58,7 +56,7 @@ function print_logo()
     echo ''
     echo 'Just enjoy it!'
     echo 'p.s. Follow me at https://github.com/chxuan.'
-    echo ''
+    echo 'p.p.s You can copy the .zshrc now!'
     printf "${normal}"
 }
 
@@ -74,7 +72,6 @@ function main()
         echo "Not Support"
     fi
     print_logo
-    source ~/.zshrc
 }
 
 # call
