@@ -66,7 +66,7 @@ function main()
     echo "Platform type: $type"
     if [ "$type" -eq "DarWin"] ; then
         install_oh_my_zsh_and_plugin
-    elif [ "$typr" -eq "Linux"] ; then
+    elif [ "$type" -eq "Linux"] ; then
         install_on_linux
     else
         echo "Not Support"
